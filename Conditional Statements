@@ -1,1 +1,218 @@
 
+price_per_shirt = 1200
+quantity = 2
+discount_rate = 10
+delivery_charge = 100
+
+# Task 1: Calculate subtotal
+sub_total= price_per_shirt*quantity
+print(sub_total)
+# Task 2: Calculate discount amount
+discount_amount = sub_total*discount_rate/100
+print(discount_amount)
+# Task 3: Calculate final bill
+final_bill= sub_total-discount_amount+delivery_charge
+print(final_bill)
+monthly_sales = 65000
+performance_score = 85
+has_warning = False
+
+# Check bonus eligibility
+bonus_eligibility = monthly_sales>=50000 and performance_score>=80 and not has_warning
+print(bonus_eligibility)
+# Print the result
+
+order_value = 2000
+inside_valley = False
+is_premium = True
+# Calculate free delivery eligibility
+delivery_eligibilty = (order_value>=5000 and inside_valley) or is_premium
+# Print True or False
+print(delivery_eligibilty)
+
+# A customer qualifies for a loan when:
+# 1. Their age is 21 or above.
+# 2. They have no overdue payments.
+# 3. They meet either of these requirements:
+#    - Salary ≥ Rs. 50,000
+#    - OR salary ≥ Rs. 35,000 AND credit score ≥ 750.
+
+age = 25
+monthly_salary = 52000
+credit_score = 600
+has_overdue_payments = False
+#  loan  eligibilty 
+loan_eligibility = age>= 21 and not has_overdue_payments and  (monthly_salary>=50000 or (monthly_salary>=35000 and credit_score>=750))
+print(loan_eligibility)
+
+
+
+
+
+
+
+
+
+# Python Day 3 — Challenge #31
+# Medium · 6/10
+# Arithmetic + Logical Operators
+# Marketplace Seller Payout System
+# This time, we're combining business calculations and eligibility checking in one program.
+# Imagine you're a junior Python developer working for an online marketplace.
+# A seller has sold 12 products. The marketplace charges a 5% commission on the total sales revenue.
+# Before paying the seller, the company needs to calculate the payout and verify whether the seller is eligible to receive it.
+# SELLER INFORMATION
+# Products sold- 12
+# Selling price per productt Rs. 750
+# Marketplace commission 5%
+# Bank account verified True
+# Account restricted False
+# Payout eligibility policy
+# A seller can receive their payout only when all three conditions are satisfied:
+# 1. The payout after commission is Rs. 8,000 or more.
+# 2. Their bank account is verified.
+# 3. Their account is not restricted
+
+
+products_sold = 20
+selling_price = 750
+commission_rate = 5
+bank_verified = True
+account_restricted = True
+
+# Task 1: Calculate total sales revenue
+total_sales_revenue = products_sold*selling_price
+print(total_sales_revenue)
+# Task 2: Calculate commission amount
+commission_amount= total_sales_revenue*commission_rate/100
+print(commission_amount)
+# Task 3: Calculate seller payout
+seller_payout = total_sales_revenue- commission_amount
+print(seller_payout)
+# Task 4: Check payout eligibility
+payout_eligibilty = seller_payout>=8000 and bank_verified and not account_restricted 
+print(payout_eligibilty)
+
+
+# Discount calculation
+# An online store sells 4 shirts at Rs. 800 each. 
+# The discount is 15% of the subtotal and delivery is Rs. 100 per order. What is the final bill?
+
+quantity = 4
+selling_price = 800
+discount = 15
+delivery = 100
+
+# Task 1: Calculate subtotal
+sub_total= selling_price*quantity
+print(sub_total)
+# Task 2: Calculate discount amount
+discount_amount = sub_total*discount/100
+print(discount_amount)
+# Task 3: Calculate final bill
+final_bill= sub_total-discount_amount+delivery
+print(final_bill)
+
+
+# A seller sells 10 products for Rs. 1,000 each. The marketplace charges 10% commission. 
+# Their bank is verified and their account is unrestricted. 
+# Write Python code to calculate revenue, commission, payout, and eligibility. 
+# Payout requires at least Rs. 8,000, verified bank, and no restrictions.
+
+
+quantity= 10
+selling_price = 1000
+commission = 10
+bank_verified = True
+account_unrestricted = True
+#  calculate revenue 
+revenue = quantity*selling_price
+print(revenue)
+#  comission amount
+commission_amount = revenue*commission/100
+print(commission_amount)
+#  payout 
+payout_amount = revenue- commission_amount
+#  eligibility 
+eligibility = payout_amount>=8000 and bank_verified and account_unrestricted
+print(eligibility)
+
+
+
+# You're working as a junior Python developer for an online shopping company.
+# Your manager wants an automatic discount calculator that gives customers different discounts based on their total purchase amount.
+# Company discount policy
+# Purchase amount	  Discount
+# Rs. 10,000 or more	20%
+# Rs. 5,000 to below Rs. 10,000	10%
+# Below Rs. 5,000	0%
+# Customer order details
+# Product price Rs. 2,000
+# Quantity purchased-4
+# Your tasks
+# Write a program that:
+# 1. Calculates the total purchase amount.
+# 2. Uses if, elif, and else to decide which discount percentage the customer receives.
+# 3. Calculates the discount amount.
+# 4. Calculates the final amount to pay.
+# 5. Prints the purchase amount, discount percentage, discount amount, and final bill.
+# Starter code
+
+product_price = 2000
+quantity = 4
+# Task 1: Calculate total purchase amount
+total_pruchase_amount = product_price*quantity
+print(total_pruchase_amount)
+# Task 2: Decide discount rate using if, elif, else
+if total_pruchase_amount >= 10000:
+    discount_rate =20
+    print(discount_rate)
+elif total_pruchase_amount  >=5000:
+    discount_rate =10
+    print(discount_rate)
+else:
+    discount_rate=0
+    print(discount_rate)
+#  Task 3: Calculate discount amount
+discount_amount = total_pruchase_amount*discount_rate/100
+print(discount_amount)
+#  Task 4: Calculate final bill
+final_bill = total_pruchase_amount-discount_amount
+print("Your Final Bill is:", final_bill)
+
+
+
+age= 65
+number_of_tickets =3
+# Decide ticket price using conditional statements 
+if age < 12 :
+    ticket_price= 150
+    print("Your ticket price is:",ticket_price)
+elif age <60:
+    ticket_price = 300
+    print("Your ticket price is:",ticket_price)
+else:
+    ticket_price = 200
+    print("Your ticket price is:",ticket_price)
+# calculate the total bill
+total_bill = number_of_tickets*ticket_price
+print(total_bill)
+
+basic_salary = 40000
+monthly_sales = 100000
+performance_score = 90
+
+# decide the bonus rate uses conditional statement 
+if monthly_sales >= 100000 and performance_score>=90:
+    bonus_rate = 20
+elif monthly_sales>=60000 and performance_score >=75:
+    bonus_rate= 10
+else :
+    bonus_rate=0
+    print("Requirements Not Met")
+# calculate the bonus  amount (use the basic salary to calculate the bonus amounnt)
+bonus_amount= basic_salary*bonus_rate/100
+print(bonus_amount)
+# calculate the final salary (first add the bonus and then calculate then calculate the final salary)
+final_salary = bonus_amount+basic_salary
+print(final_salary)
