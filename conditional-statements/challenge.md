@@ -1,5 +1,5 @@
 
-# Python Challenge #36 — Hotel Booking & Discount System 🏨
+# Python Challenge  — Hotel Booking & Discount System 🏨
 
 **Topic:** Nested Conditional Statements (`if`, `elif`, `else`)
 
